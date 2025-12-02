@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Pacifico&display=swap');
 
 :root {
     --base-color: #E8E0D5;
     --button-color: #333333;
     --text-color: #333333;
     --font-cursive: "Pacifico", cursive;; 
-    --font-sans: "Zain", sans-serif;;
+    --font-sans: "Lexend", sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,11 +19,14 @@ body {
 }
 
 .main-header {
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px 0 30px;
-    height: 100px;
+    height: 90px;
 }
 
 .logo h1 a {
@@ -46,7 +54,8 @@ body {
 }
 
 .nav-links li a {
-    height: 0;
+    height: 30px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,10 +65,9 @@ body {
     color: var(--text-color);
     font-family: var(--font-sans);
     transition: 0.2s;
-}
-
-.nav-links li a:hover {
-    text-shadow: 0 0 10px #333333b9;
+    &:hover {
+        text-shadow: 0 0 10px #333333b9;
+    }
 }
 
 .hero-section {
@@ -86,17 +94,20 @@ body {
     display: inline-block;
     padding: 15px 30px;
     background-color: var(--button-color);
-    color: var(--base-color);
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 1.3rem;
     text-decoration: none;
     border-radius: 15px;
     font-family: var(--font-sans);
     transition: 0.2s;
+    &:hover {
+        box-shadow: 0 0 15px 5px #a8a8a8b9;;
+    }
 }
 
-.hero-content .cta-button:hover {
-    box-shadow: 0 0 15px 5px #a8a8a8b9;;
+section {
+    scroll-margin-top: 90px;
 }
 
 .menu-section {
@@ -104,9 +115,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.menu-element {
+    width: 200px;
+    height: 300px;
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 10px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-element-title {
+    font-family: var(--font-cursive);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+}
+
+.menu-element-description {
+    font-family: var(--font-sans);
+    text-align: center;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.menu-element-info {
+    font-family: var(--font-sans);
+    text-align: center;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.menu-element-price {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
-  
+
 }
