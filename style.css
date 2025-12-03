@@ -4,10 +4,11 @@
     --base-color: #E8E0D5;
     --button-color: #333333;
     --text-color: #333333;
+    --shadow-color: #bdbdbd;
+    --light-text-color: #707070;
     --font-cursive: "Pacifico", cursive;; 
     --font-sans: "Lexend", sans-serif;
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -66,7 +67,7 @@ body {
     font-family: var(--font-sans);
     transition: 0.2s;
     &:hover {
-        text-shadow: 0 0 10px #333333b9;
+        text-shadow: 0 0 20px var(--shadow-color);
     }
 }
 
@@ -74,7 +75,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 80vh;
     background-image: url(images/cow-background.png);
 }
 
@@ -102,7 +103,7 @@ body {
     font-family: var(--font-sans);
     transition: 0.2s;
     &:hover {
-        box-shadow: 0 0 15px 5px #a8a8a8b9;;
+        box-shadow: 0 0 10px 1px var(--shadow-color);
     }
 }
 
@@ -110,22 +111,41 @@ section {
     scroll-margin-top: 90px;
 }
 
-.menu-section {
+.shop-section {
     background-color: var(--base-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
+    padding: 0 0 30px 0;
+    box-shadow: 0 0 30px 1px var(--base-color);
 }
 
-.menu-content {
+.shop-slogan {
+    font-family: var(--font-cursive);
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.shop-slogan h1 {
+    margin-bottom: 0;
+}
+
+.shop-slogan p {
+    margin-top: 0;
+    color: var(--light-text-color);
+}
+
+.shop-content {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 
-.menu-element {
+.shop-element {
     width: 200px;
-    height: 300px;
+    height: 270px;
     background-color: #FFFFFF;
     margin: 10px;
     padding: 10px 0;
@@ -134,30 +154,32 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: 0 0 30px 5px var(--shadow-color);
 }
 
-.menu-element-title {
+.shop-element-title {
     font-family: var(--font-cursive);
     color: var(--text-color);
     padding: 0;
     margin: 0;
 }
 
-.menu-element-description {
+.shop-element-description {
     font-family: var(--font-sans);
     text-align: center;
     padding: 0 10px;
     margin: 0;
 }
 
-.menu-element-info {
+.shop-element-info {
     font-family: var(--font-sans);
     text-align: center;
     padding: 0 10px;
     margin: 0;
+    font-size: 0.7rem;
 }
 
-.menu-element-price {
+.shop-element-price {
     font-family: var(--font-sans);
     font-size: 0.8rem;
     font-weight: bold;
@@ -166,6 +188,95 @@ section {
     padding: 0;
 }
 
-@media (min-width: 768px) {
+.shop-element button {
+    background-color: var(--button-color);
+    font-family: var(--font-sans);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 15px;
+}
+
+.menu-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-image: url(images/cow-background.png);
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 30px;
+}
+
+.menu-element {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px 1px var(--shadow-color);
+}
+
+.menu-element-slogan {
+    font-family: var(--font-cursive);
+    color: var(--text-color);
+}
+
+.menu-element hr {
+    width: 90%;
+    background-color: var(--text-color);
+    border-style: solid;
+    margin: 0;
+}
+
+.menu-element-positions {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-element-positions > *:not(:first-child) {
+    border-top: 1px solid var(--text-color);
+    padding: 10px;
+}
+
+.menu-element-position {
+    width: 90%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-position-information h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-position-information h3 {
+    font-family: var(--font-cursive);
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.menu-position-information p {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+}
+
+.menu-position-price {
+    font-family: var(--font-sans);
+}
+
+@media (max-width: 768px) {
 
 }
