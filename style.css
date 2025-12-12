@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Pacifico&display=swap');
 
 :root {
-    --base-color: #E8E0D5;
+    --base-color: #c2b19b;
+    --background-color: #f3ebe1;
     --button-color: #333333;
     --text-color: #333333;
-    --shadow-color: #bdbdbd;
+    --shadow-color: #0000000f;
     --light-text-color: #707070;
     --font-cursive: "Pacifico", cursive;; 
     --font-sans: "Lexend", sans-serif;
@@ -17,6 +18,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--background-color);
 }
 
 .main-header {
@@ -246,6 +248,10 @@ section {
     color: var(--text-color);
 }
 
+.menu-element-slogan h2 {
+    margin-bottom: 5px;
+}
+
 .menu-element hr {
     width: 90%;
     background-color: var(--text-color);
@@ -264,7 +270,7 @@ section {
 
 .menu-element-positions > *:not(:first-child) {
     border-top: 1px solid var(--text-color);
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 .menu-element-position {
