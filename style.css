@@ -372,7 +372,7 @@ footer {
     justify-content: center;
 }
 
-footer p {
+.footer-content p {
     font-family: var(--font-sans);
     color: var(--text-color);
     font-size: 1rem;
@@ -423,6 +423,10 @@ footer p {
 
     .about-section .image-container {
         width: 90%;
+    }
+
+    .footer-content p {
+        font-size: 3vw;
     }
 }
 
